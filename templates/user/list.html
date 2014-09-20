@@ -1,0 +1,28 @@
+<div class="page-header">
+    <h1>Users</h1>
+</div>
+
+<div class="views views-user-list">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Status</th>
+                <th>Last login</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <% if (_.isEmpty(users)) { %>
+                <td colspan="3">No result found.</td>
+            <% } else { %>
+                <% _.each(users, function(user) { %>
+                <td><%= user.get("name") %></td>
+                <td></td>
+                <td></td>
+                <% }); %>
+            <% } %>
+            </tr>
+        </tbody>
+    </table>
+</div>
