@@ -5,11 +5,11 @@ define([
     'backbone'
 ], function(_, Backbone) {
     var UserModel = Backbone.Model.extend({
-        urlRoot: '/user',
+        urlRoot: '/users',
         defaults: {
-            name: '',
+            username: '',
             email: '',
-            password: ''
+            updated_at: ''
         },
         
         runFetch: function() {
